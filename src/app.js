@@ -1,3 +1,4 @@
 import './rem.js';
 import './app.less';
-import bg from './img/bg.gif'
+import templateString from './index.html';
+

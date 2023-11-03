@@ -33,11 +33,16 @@ module.exports = {
             }]
         },
         {
+            test: /\.html$/,
+            loader: 'html-loader'
+        },
+        {
             test: /\.(png|svg|jpg|gif)$/,
-            type: 'asset/resource',
-            use: [
-                'url-loader'
-            ]
+            type: 'asset/resource',  //替代 file-loader
+            generator: {
+                filename: 'assets/images/[name][hash][ext][query]' // 定义输出的文件名和路径
+            }
+
         },
         {
             test: /\.(ttf|eot|woff(2))(\?[a-z0-9]+)?$/,
