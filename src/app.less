@@ -1,0 +1,90 @@
+@divide: 10;
+@pswWidth: 414;
+@ppr: (@divide/@pswWidth) * 1rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-body {
+    position: relative;
+
+    .bg-pic {
+        width: 414*@ppr;
+        height: 896*@ppr;
+        font-size: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 100*@ppr;
+        left: 47*@ppr;
+
+        .title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 33.12*@ppr;
+            line-height: 38.64*@ppr;
+            color: #fff;
+            line-break: anywhere;
+        }
+
+        .line {
+            width: 318*@ppr;
+            height: 1*@ppr;
+            background: #fff;
+            margin-top: 13.248*@ppr;
+            margin-bottom: 8.832*@ppr;
+            opacity: .1;
+        }
+
+        .intro {
+            font-weight: 500;
+            font-size: 15.456*@ppr;
+            line-height: 26.496*@ppr;
+            text-align: justify;
+            color: #fff;
+            opacity: .7;
+            width: 316.844*@ppr;
+        }
+
+    }
+
+    .btns {
+        position: absolute;
+        bottom: 64*@ppr;
+        left: 34*@ppr;
+        display: flex;
+        flex-direction: column;
+        gap: 22*@ppr;
+
+        .btn {
+            margin: 0 auto;
+            width: 338.922*@ppr;
+            height: 55.1875*@ppr;
+            line-height: 55.2*@ppr;
+            font-size: 18.768*@ppr;
+            text-align: center;
+            border-radius: 8.832*@ppr;
+            border: 2*@ppr solid #fff;
+
+
+        }
+
+        .btn.download {
+            color: #000;
+            background: #fff;
+        }
+
+        .btn.live {
+            color: #fff;
+        }
+    }
+}
